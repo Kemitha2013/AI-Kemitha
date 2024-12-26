@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Your Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #display-name {
+            margin-top: 20px;
+            font-size: 24px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Type Your Name Below</h1>
+    <input type="text" id="name-input" placeholder="Enter your name">
+    <button onclick="displayName()">Submit</button>
+    <p id="display-name"></p>
+
+    <script>
+        function displayName() {
+            // Get the name from the input field
+            const userName = document.getElementById("name-input").value;
+
+            // Display the name dynamically
+            if (userName) {
+                document.getElementById("display-name").textContent = `Hello, ${userName}!`;
+            } else {
+                document.getElementById("display-name").textContent = "Please enter your name.";
+            }
+        }
+    </script>
+</body>
+</html>
